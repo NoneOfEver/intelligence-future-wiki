@@ -170,26 +170,12 @@ export default function NewShape(props: Props) {
                             required
                         />
                     </div>
-                    {/* 根据需要添加更多输入字段 */}
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <button type="button" className="btn btn-secondary" onClick={randomizeBlob}>
-                            Randomize
-                        </button>
-                        <button type="submit" className="btn btn-primary">
-                            Generate Shape
-                        </button>
-                    </div>
                 </form>
                 {blobData && (
                     <div className="mt-6 aspect-square text-primary">
                         <ShapePreview {...blobData} />
                     </div>
                 )}
-            </div>
-            <div className="flex flex-wrap justify-center gap-4">
-                <button className="btn btn-primary" onClick={uploadBlob} disabled={isUploadDisabled}>
-                    Upload
-                </button>
             </div>
         </>
     }
