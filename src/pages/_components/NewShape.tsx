@@ -41,7 +41,7 @@ export default function NewShape(props: Props) {
     return (
         <>
             <div className="w-full bg-transparent rounded-lg mb-6">
-                <div className="min-h-14 p-4 border-b border-neutral-200 text-neutral-900 text-center">
+                <div className="mb-4 text-xl text-center sm:text-xl">
                     <span>spider</span>
                 </div>
                 <div className="p-4 aspect-square text-primary">{blobData && <ShapePreview {...blobData} />}</div>

@@ -41,38 +41,38 @@ export default function StoredShapes(props: Props) {
         getBlobKeyList();
     }, [lastMutationTime]);
 
-    return (
-        <>
-            <h2 className="mb-4 text-xl text-center sm:text-xl">Objects in Blob Store</h2>
-            <div className="w-full bg-white rounded-lg">
-                <div className="min-h-14 p-4 text-center">
-                    {keys?.length ? (
-                        <div className="space-y-1">
-                            {keys.map((keyName) => (
-                                <button
-                                    key={keyName}
-                                    className={
-                                        'btn btn-ghost btn-sm btn-block text-neutral-900 font-normal' +
-                                        (selectedKey === keyName ? ' bg-base-content/20 pointer-events-none' : '')
-                                    }
-                                    onClick={() => {
-                                        getBlobByKey(keyName);
-                                    }}
-                                >
-                                    {keyName}
-                                </button>
-                            ))}
-                        </div>
-                    ) : (
-                        <span className="text-neutral-900">Please upload some shapes!</span>
-                    )}
-                </div>
-                {previewData && (
-                    <div className="p-4 aspect-square text-primary border-t border-neutral-200">
-                        <ShapePreview {...previewData} />
-                    </div>
-                )}
-            </div>
-        </>
-    );
+    // return (
+    //     <>
+    //         <h2 className="mb-4 text-xl text-center sm:text-xl">Objects in Blob Store</h2>
+    //         <div className="w-full bg-white rounded-lg">
+    //             <div className="min-h-14 p-4 text-center">
+    //                 {keys?.length ? (
+    //                     <div className="space-y-1">
+    //                         {keys.map((keyName) => (
+    //                             <button
+    //                                 key={keyName}
+    //                                 className={
+    //                                     'btn btn-ghost btn-sm btn-block text-neutral-900 font-normal' +
+    //                                     (selectedKey === keyName ? ' bg-base-content/20 pointer-events-none' : '')
+    //                                 }
+    //                                 onClick={() => {
+    //                                     getBlobByKey(keyName);
+    //                                 }}
+    //                             >
+    //                                 {keyName}
+    //                             </button>
+    //                         ))}
+    //                     </div>
+    //                 ) : (
+    //                     <span className="text-neutral-900">Please upload some shapes!</span>
+    //                 )}
+    //             </div>
+    //             {previewData && (
+    //                 <div className="p-4 aspect-square text-primary border-t border-neutral-200">
+    //                     <ShapePreview {...previewData} />
+    //                 </div>
+    //             )}
+    //         </div>
+    //     </>
+    // );
 }
