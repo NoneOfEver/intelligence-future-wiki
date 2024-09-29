@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ShapePreview from './ShapePreview.tsx';
-import { generateBlob } from '../../../utils';
-import type { BlobProps } from '../../../types.ts';
+import { generateBlob } from '../../utils';
+import type { BlobProps } from '../../types.ts';
 
 interface Props {
     lastMutationTime: number;
