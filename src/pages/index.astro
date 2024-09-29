@@ -53,19 +53,19 @@ const explainer = `
 `;
 ---
 <Layout title="Blobs">
-    <ContextAlert
-        addedChecksFunction={() => {
-            return uploadDisabled ? uploadDisabledText : null;
-        }}
-        class="mb-6"
-    />
-    <h1 class="mb-8">Blobs x Blobs</h1>
-    <ShapeEditor client:load />
 </Layout>
 
 <Layout title="Welcome to IntelligenceFuture.">
     <ContextAlert class="mb-4" />
     <h1 class="mb-10">智感未来实验室</h1>
+    <ContextAlert
+    addedChecksFunction={() => {
+        return uploadDisabled ? uploadDisabledText : null;
+    }}
+    class="mb-6"
+    />
+    <ShapeEditor client:load />
+
     <Markdown content={explainer} class="text-lg mb-10" />
     <p class="mb-8">
         <a href="https://github.com/orgs/HNUST-Dynamic/repositories" class="btn btn-lg btn-primary sm:btn-wide">Jump to github organization</a>
