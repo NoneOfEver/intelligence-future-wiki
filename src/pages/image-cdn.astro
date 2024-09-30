@@ -113,27 +113,30 @@ const devModeWarning = `
         <div class="absolute top-40 left-40 bg-black bg-opacity-0 text-white text-3xl px-4 py-2 rounded z-10">
             嵌入式组
         </div>
+        <ShapeEditor client:load class="z-0" />
+
         <Markdown content={embbed} class="text-lg mb-10" />
 
-        <ShapeEditor client:load class="z-0" />
     </div>    
     <div class="relative mb-6">
         <!-- 覆盖文字 -->
         <div class="absolute top-50 left-40 bg-black bg-opacity-0 text-white text-3xl px-4 py-2 rounded z-10">
             软件组
         </div>
+        <ShapeEditor client:load class="z-0" />
+
         <Markdown content={software} class="text-lg mb-10" />
 
-        <ShapeEditor client:load class="z-0" />
     </div>    
     <div class="relative mb-6">
         <!-- 覆盖文字 -->
         <div class="absolute top-50 left-40 bg-black bg-opacity-0 text-white text-3xl px-4 py-2 rounded z-10">
             机械组
         </div>
+        <ShapeEditor client:load class="z-0" />
+
         <Markdown content={machine} class="text-lg mb-10" />
 
-        <ShapeEditor client:load class="z-0" />
     </div>    
 
 </Layout>
