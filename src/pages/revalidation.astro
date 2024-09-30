@@ -7,7 +7,7 @@ import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import corgi from '../assets/spider.jpg';
 import dog1 from '../assets/dog1.jpg';
-import dog2 from '../assets/dog2.jpg';
+import dog2 from '../assets/dog2.png';
 import dog3 from '../assets/dog3.jpg';
 import { getNetlifyContext } from '../utils';
  
@@ -62,16 +62,29 @@ const exampleTag = tags[randomInt(0, tags.length - 1)];
         <section>
             <figure>
                 <Image src={dog1} alt="dog1" class="border-2 border-white rounded-lg" />
+                <figcaption class="mt-2 text-sm italic">
+                    Credit: photo by 
+                </figcaption>
+
             </figure>
+
         </section>
         <section>
             <figure>
                 <Image src={dog2} alt="dog2" class="border-2 border-white rounded-lg" />
+                <figcaption class="mt-2 text-sm italic">
+                    Credit: photo by 
+                </figcaption>
+
             </figure>
         </section>
         <section>
             <figure>
                 <Image src={dog3} alt="dog3" class="border-2 border-white rounded-lg" />
+                <figcaption class="mt-2 text-sm italic">
+                    Credit: photo by 
+                </figcaption>
+
             </figure>
         </section>
 
