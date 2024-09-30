@@ -9,6 +9,8 @@ import corgi from '../assets/spider.jpg';
 import dog1 from '../assets/dog1.jpg';
 import dog2 from '../assets/dog2.png';
 import dog3 from '../assets/dog3.jpg';
+import drone from '../assets/drone.jpg';
+import spider2 from '../assets/spider2.jpg';
 import { getNetlifyContext } from '../utils';
  
 const sampleImage = '/images/corgi.jpg';
@@ -47,23 +49,12 @@ const exampleTag = tags[randomInt(0, tags.length - 1)];
     <h1 class="mb-10">实验室科创成果</h1>
     <Markdown content={explainer} class="mb-10" />
     <div class="flex flex-col gap-12 sm:gap-16">
-        <section class="space-y-8">
-            <ContextAlert
-                addedChecksFunction={(ctx) => {
-                    return ctx === 'dev' ? devModeWarning : null;
-                }}
-            />
-        </section>
-        <section>
-            <figure>
-                <Image src={corgi} alt="Corgi" class="border-2 border-white rounded-lg" />
-            </figure>
-        </section>
         <section>
             <figure>
                 <Image src={dog1} alt="dog1" class="border-2 border-white rounded-lg" />
                 <figcaption class="mt-2 text-sm italic">
-                    Credit: photo by 
+                    20级学长作品：智能四足机器人
+                    站立图
                 </figcaption>
 
             </figure>
@@ -73,7 +64,7 @@ const exampleTag = tags[randomInt(0, tags.length - 1)];
             <figure>
                 <Image src={dog2} alt="dog2" class="border-2 border-white rounded-lg" />
                 <figcaption class="mt-2 text-sm italic">
-                    Credit: photo by 
+                    跳跃图
                 </figcaption>
 
             </figure>
@@ -82,11 +73,37 @@ const exampleTag = tags[randomInt(0, tags.length - 1)];
             <figure>
                 <Image src={dog3} alt="dog3" class="border-2 border-white rounded-lg" />
                 <figcaption class="mt-2 text-sm italic">
-                    Credit: photo by 
+                    内部图
                 </figcaption>
 
             </figure>
         </section>
+        <section>
+            <figure>
+                <Image src={spider2} alt="spider2" class="border-2 border-white rounded-lg" />
+                <figcaption class="mt-2 text-sm italic">
+                    20级学长作品：六足机器人
+                </figcaption>
+   
+            </figure>
+        </section>
+        <section>
+            <figure>
+                <Image src={drone} alt="drone" class="border-2 border-white rounded-lg" />
+                <figcaption class="mt-2 text-sm italic">
+                    20级学长作品：四旋翼飞行器
+                </figcaption>
+   
+            </figure>
+        </section>
+        <section class="space-y-8">
+            <ContextAlert
+                addedChecksFunction={(ctx) => {
+                    return ctx === 'dev' ? devModeWarning : null;
+                }}
+            />
+        </section>
+
 
     </div>
 
