@@ -36,7 +36,59 @@ import corgi from '../assets/corgi.jpg';
 <Image src={corgi} alt="Corgi" /* ... additional props */ />
 ~~~
 `;
+const embbed = `
+## 嵌入式组考核标准：
+### 大一：
+~~~text
+以下内容二选一
+1.在指定时间内学习完C语言语法，包括数据类型、函数、数组、指针；
+验收时会要求现场做题目，大概有计算机二级的难度；
+2.在指定时间内学习完立创EDA的基本操作，可以画简单的二层PCB板；
+了解各种电子元器件的特性，不要求精准无误，但要求知道大概干什么用的，以及如何分辨好坏；
+在验收前绘制好一个5V降压到3.3V的降压模块，推荐用LDO，验收时现场焊接并测试；
+两项同时满足更优
+~~~
+### 大二：
+~~~text
+在指定时间内了解C语言的高级特性：如用C语言实现面向对象的编程方法，高内聚低耦合的设计模式，基于openocd和ARM- GNU-toolchain的现代化编译调试方式；
+在指定时间内了解如何用Keil调试，用VSCode编辑代码；
+基于我们给的资料，在考核验收前至少学会串口dma不定长数据的收发，可变周期和占空比的pwm波形发生；
+在考核验收前能够利用立创eda画简单的mcu核心板，并且了解一些基本的pcb绘制常识，验收时会考；
+在考核验收前自行用立创eda绘制一块stm32f103c8t6核心板，要求不仅有核心电路，还要引出至少两路UART，一路用于debug，一路用于现场编程考核，其余部分不做要求，尺寸越小越好，可选择考核时现场焊接也可选择自己提前焊好，但禁止SMT；
 
+~~~
+`;
+const software = `
+## 软件组考核标准：
+###大一
+~~~text
+1.Linux操作系统能力
+能使用基本的Linux命令完成文件管理（如ls、cd、cp、mv等）、文件权限设置（如chmod、chown）。能通过终端进行软件安装、更新和卸载（如使用apt包管理器）
+能检查系统状态（如df查看磁盘使用情况，free查看内存使用情况）。
+熟悉日志查看工具（如cat、tail、grep）以排查常见系统问题。
+具备基本的外设连接与使用能力
+2. Python编程能力
+基础Python编程
+能够编写简单的Python脚本完成日常任务，熟悉Python的基本语法结构（如变量、循环、条件判断）。
+熟悉常用数据结构（如列表、字典、集合）以及文件操作（读写文件、路径管理）。
+3.学习HTML、CSS、JavaScript，考核现场写一个简单的网页；
+~~~
+### 大二：
+~~~text
+1.Python库使用
+能够使用pip进行Python包的安装和管理，理解虚拟环境（conda）的基本使用
+2.Python脚本自动化
+能编写简单的Python脚本完成系统任务自动化（如定时备份、日志清理等）。
+能够结合cron或systemd设置Python脚本的定时执行或开机自启。
+能够使用Python简单控制硬件接口，如通过GPIO、I2C或串口与设备通信（基础的数据读取和发送）
+能够配置并管理Python虚拟环境，理解虚拟环境的作用，并能够创建、激活、删除虚拟环境。
+能通过requirements.txt文件管理项目的依赖包。
+能够在linux上实现yolo目标推理的环境搭建和模型部署部署，并实现摄像头的实时推理。
+3.了解微信小程序，会翻看API文档和工作原理和云服务商（如阿里云，腾讯云，）的服务内容
+4.加分项：能看懂和编写基本的C++代码
+~~~
+`;
+const machine = ``;
 const originalVsCdnSnippet = `
 `;
 
@@ -61,6 +113,8 @@ const devModeWarning = `
         <div class="absolute top-40 left-40 bg-black bg-opacity-0 text-white text-3xl px-4 py-2 rounded z-10">
             嵌入式组
         </div>
+        <Markdown content={embbed} class="text-lg mb-10" />
+
         <ShapeEditor client:load class="z-0" />
     </div>    
     <div class="relative mb-6">
@@ -68,6 +122,8 @@ const devModeWarning = `
         <div class="absolute top-50 left-40 bg-black bg-opacity-0 text-white text-3xl px-4 py-2 rounded z-10">
             软件组
         </div>
+        <Markdown content={software} class="text-lg mb-10" />
+
         <ShapeEditor client:load class="z-0" />
     </div>    
     <div class="relative mb-6">
@@ -75,6 +131,8 @@ const devModeWarning = `
         <div class="absolute top-50 left-40 bg-black bg-opacity-0 text-white text-3xl px-4 py-2 rounded z-10">
             机械组
         </div>
+        <Markdown content={machine} class="text-lg mb-10" />
+
         <ShapeEditor client:load class="z-0" />
     </div>    
 
