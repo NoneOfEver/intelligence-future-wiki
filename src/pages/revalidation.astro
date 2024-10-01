@@ -53,7 +53,12 @@ const spidertext = `
 ## 仿生六足机器人
 * 六足以\`舵机\`为动力，\`MCU\`作为主控,搭载\`深度相机\`和\`激光雷达\`等感知组件
 `;
-const locktext = '';
+const locktext = `
+## 智能网联车位锁
+* 通过\`微信小程序\`为客户和商家提供共享经济服务
+* 远程开锁
+* 视觉识别车牌
+`;
 const csgotext = '';
 
 const devModeWarning = `
@@ -119,7 +124,7 @@ const exampleTag = tags[randomInt(0, tags.length - 1)];
         </section>
         <section>
             <figure>
-                <Markdown content={dronetext} class="mb-8" />
+                <Markdown content={locktext} class="mb-8" />
                 <Image src={lock} alt="lock" class="border-2 border-white rounded-lg" />
                 <figcaption class="mt-2 text-sm italic">
                     21级学长作品：智能网联车位锁
