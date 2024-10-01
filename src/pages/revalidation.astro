@@ -11,6 +11,7 @@ import dog2 from '../assets/dog2.png';
 import dog3 from '../assets/dog3.jpg';
 import drone from '../assets/drone.jpg';
 import spider2 from '../assets/spider2.jpg';
+import lock from '../assets/lock.jpg'
 import { getNetlifyContext } from '../utils';
  
 const sampleImage = '/images/corgi.jpg';
@@ -116,6 +117,17 @@ const exampleTag = tags[randomInt(0, tags.length - 1)];
    
             </figure>
         </section>
+        <section>
+            <figure>
+                <Markdown content={dronetext} class="mb-8" />
+                <Image src={lock} alt="lock" class="border-2 border-white rounded-lg" />
+                <figcaption class="mt-2 text-sm italic">
+                    21级学长作品：智能网联车位锁
+                </figcaption>
+   
+            </figure>
+        </section>
+
     </div>
 
 </Layout>
